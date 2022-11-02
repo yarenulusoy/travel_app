@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../widgets/button/login_button.dart';
-import '../widgets/text_field/login_text.dart';
+import '../../widgets/button/login_button.dart';
+import '../../widgets/text_field/login_text.dart';
+import 'login_screen.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({Key? key}) : super(key: key);
@@ -94,12 +95,19 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
-                        Text("Hesabınız var mı? "),
-                        Text(
-                          "Giriş Yapın",
-                          style: TextStyle(
-                              fontWeight: FontWeight.w600, fontSize: 18),
+                      children: [
+                        const Text("Hesabınız var mı? "),
+
+                        TextButton(
+                          onPressed: () {
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => const LoginScreen()));
+                          },
+                          child:
+                          const Text(
+                            "Giriş Yapın",
+                            style: TextStyle(
+                                fontWeight: FontWeight.w600, fontSize: 18),
+                          ),
                         ),
                       ],
                     )

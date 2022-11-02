@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import '../widgets/button/login_button.dart';
-import '../widgets/text_field/login_text.dart';
+import 'package:travel_app/view/home/home_view.dart';
+import 'package:travel_app/view/login/register_screen.dart';
+import '../../widgets/button/login_button.dart';
+import '../../widgets/text_field/login_text.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -17,7 +19,7 @@ class _LoginScreenState extends State<LoginScreen> {
     return Container(
       decoration: const BoxDecoration(
         image: DecorationImage(
-            image: AssetImage('assets/images/login.png'), fit: BoxFit.cover),
+            image: AssetImage('assets/images/png/login.png'), fit: BoxFit.cover),
       ),
       child: Scaffold(
         backgroundColor: Colors.transparent,
@@ -64,7 +66,9 @@ class _LoginScreenState extends State<LoginScreen> {
                                       text: "GİRİŞ YAP",
                                       bgColor: Colors.indigo,
                                       textColor: Colors.white,
-                                      onPressed: () {},
+                                      onPressed: () {
+                                        Navigator.push(context, MaterialPageRoute(builder: (context) => HomeView()));
+                                      },
                                     ),
                                   ),
                                   Padding(
@@ -76,7 +80,9 @@ class _LoginScreenState extends State<LoginScreen> {
                                         text: "KAYIT OL",
                                         bgColor: Colors.white,
                                         textColor: Colors.indigo,
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          Navigator.push(context, MaterialPageRoute(builder: (context) => const RegisterScreen()));
+                                        },
                                       ),
                                     ),
                                   ),
