@@ -1,5 +1,5 @@
 # travel_app
-
+Veritabanı olarak firebase, harita için google maps api kullanılmıştır.
 Kullanıcı, uygulamayı ilk defa kullanıyorsa Kayıt Ol sayfasından kaydolması gerekir. \n
 Kaydolan kullanıcı “Giriş Yap” sayfasından giriş işlemlerini yapabilir. \n
 Kullanıcı giriş yaptıktan sonra ana sayfada tüm kullanıcıların eklediği mekanlar listelenmektedir. Kafeler, sahiller, müzeler ve camiler gibi kategoriler mevcuttur.  \n
